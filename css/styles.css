@@ -84,7 +84,7 @@ a {
 /* Header */
 .page-header {
   background-color: #fff;
-  border: 1px solid rgba(236, 236, 236, 1);
+  border-bottom: 1px solid rgba(236, 236, 236, 1);
 }
 
 /* Logo */
@@ -150,27 +150,30 @@ a {
   padding-bottom: 32px;
 }
 
-.contacts-link::before {
+/* .contacts-link::before {
   content: '';
-}
+} */
 
-.icon-mail::before {
-  height: 12px;
-  width: 16px;
+.icon-contact {
+  padding: 0;
+  margin-left: 0;
   margin-right: 10px;
 
-  background-image: url(../images/mail.svg);
-}
-
-.phone-icon::before {
-  height: 16px;
-  width: 10px;
-  margin-right: 10px;
-  background-image: url(../images/phone.svg);
+  fill: #757575;
 }
 
 .contacts {
   display: flex;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--accent-color);
+}
+
+.contacts-link:hover .icon-contact,
+.contacts-link:focus .icon-contact {
+  fill: #2196f3;
 }
 
 .contacts-item + .contacts-item {
@@ -186,9 +189,7 @@ a {
 }
 
 .site-nav :hover,
-.site-nav :focus,
-.contacts .contacts-link:hover,
-.contacts .contacts-link:focus {
+.site-nav :focus {
   color: var(--accent-color);
 }
 
@@ -205,6 +206,8 @@ a {
   text-align: center;
   padding-bottom: 200px;
   padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
@@ -422,11 +425,13 @@ a {
   fill: rgba(175, 177, 184, 1);
 }
 
-.team-soc-link:hover {
+.team-soc-link:hover,
+.team-soc-link:focus {
   background-color: var(--accent-color);
 }
 
-.team-soc-link:hover .team-soc-icon {
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
   fill: var(--primary-bg-color);
 }
 
@@ -511,6 +516,8 @@ a {
 .projects-item {
   flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
+
+  cursor: pointer;
 }
 
 .item-border {
@@ -535,6 +542,11 @@ a {
   line-height: 1.19;
 
   color: var(--secondary-text-color);
+}
+
+.projects-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 /* Button */
@@ -658,11 +670,13 @@ a {
   align-items: center;
 }
 
-.footer-soc-link:hover {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
   background-color: var(--accent-color);
 }
 
-.footer-soc-link:hover .footer-soc-icon {
+.footer-soc-link:hover .footer-soc-icon,
+.footer-soc-link:focus .footer-soc-icon {
   fill: var(--primary-bg-color);
 }
 
