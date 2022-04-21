@@ -67,6 +67,7 @@ a {
 
 .section {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Visually-hidden */
@@ -236,6 +237,10 @@ a {
 }
 
 /* Features list */
+
+.feature {
+  padding-bottom: 0;
+}
 
 .feature-title {
   margin: 0;
@@ -538,6 +543,8 @@ a {
   line-height: 1.19;
 
   color: var(--secondary-text-color);
+
+  margin-top: 4px;
 }
 
 .projects-item:hover {
@@ -680,18 +687,15 @@ a {
   margin-left: 10px;
 }
 
-.footer-soc {
-  padding-top: 72px;
-  padding-bottom: 100px;
-}
-
 .footer-contacts {
-  padding: 60px 0;
   margin-right: 70px;
 }
 
 .main-footer .container {
   display: flex;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 /* last modif */
